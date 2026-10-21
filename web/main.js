@@ -712,7 +712,7 @@ import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/
         });
         const contentType = response.headers.get('content-type') || '';
         if(!contentType.includes('application/json')){
-          throw new Error('Fitur kirim pesan belum aktif di preview lokal. Kirim melalui situs yang sudah di-deploy dengan API dan Supabase aktif.');
+          throw new Error('API pengiriman belum tersedia di deployment ini. Periksa konfigurasi Vercel lalu deploy ulang.');
         }
         const result = await response.json();
         if(!response.ok) throw new Error(result.error || 'Ucapan gagal dikirim.');

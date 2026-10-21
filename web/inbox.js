@@ -88,7 +88,7 @@ async function loadCards() {
     });
     const contentType = response.headers.get('content-type') || '';
     if(!contentType.includes('application/json')){
-      throw new Error('Inbox belum tersedia di preview lokal. Gunakan situs yang sudah di-deploy dengan API dan Supabase aktif.');
+      throw new Error('API inbox belum tersedia di deployment ini. Periksa konfigurasi Vercel lalu deploy ulang.');
     }
     const result = await response.json();
     if (!response.ok) throw new Error(result.error || 'Tidak dapat memuat inbox.');
