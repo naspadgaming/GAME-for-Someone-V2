@@ -1,0 +1,17 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Local audio file: use the official Apple Music embed in the public version.
+web/assets/sparks.mp3
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Vercel and Node tooling
+.vercel/
+node_modules/

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Inbox — GAME for Someone V2</title>
+  <link rel="stylesheet" href="inbox.css">
+  <script type="module" src="inbox.js"></script>
+</head>
+<body>
+  <main class="inbox-shell">
+    <a class="back-link" href="/">← Kembali ke game</a>
+    <header>
+      <span class="eyebrow"></span>
+      <h1>... <span></span></h1>
+      <p>.</p>
+    </header>
+
+    <section id="loginPanel" class="panel">
+      <h2></h2>
+      <p>.</p>
+      <form id="loginForm">
+        <label for="password">Password inbox</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+        <button type="submit"></button>
+      </form>
+      <p id="loginStatus" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="inboxPanel" class="panel hidden">
+      <div class="toolbar">
+        <div>
+          <h2>Semua tulisan</h2>
+          <p id="cardCount" class="count">Memuat...</p>
+        </div>
+        <div class="toolbar-actions">
+          <button id="refreshButton" class="secondary" type="button">Muat ulang</button>
+          <button id="downloadAllButton" type="button" disabled>Unduh CSV</button>
+          <button id="logoutButton" class="secondary" type="button">Keluar</button>
+        </div>
+      </div>
+      <p id="inboxStatus" class="status" role="status" aria-live="polite"></p>
+      <div id="cardsList" class="cards-list"></div>
+    </section>
+  </main>
+</body>
+</html>

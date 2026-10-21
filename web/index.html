@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GAME for Someone V2</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js",
+      "three/": "https://cdn.jsdelivr.net/npm/three@0.154.0/"
+    }
+  }
+  </script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <div id="hud">
+    <div id="basket">Basket: 0</div>
+    <div id="placed">Placed: 0 / 5</div>
+    <div id="instructions">Use WASD / arrow keys to move, click flowers to collect, then click shrine to place.</div>
+  </div>
+  <div id="shrineLabel" class="hud-label hidden">Shrine - Click to place</div>
+  <div id="touchControls" class="touch-controls hidden">
+    <div class="touch-hint">Buat Movee</div>
+    <button class="touch-btn" data-dir="forward">▲</button>
+    <div class="touch-row">
+      <button class="touch-btn" data-dir="left">◀</button>
+      <button class="touch-btn" data-dir="backward">▼</button>
+      <button class="touch-btn" data-dir="right">▶</button>
+    </div>
+  </div>
+
+  <div id="giftModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🎁 MWEHWHWHWEHEHEHEH</h2>
+        <button id="closeGift" class="ghost-btn">✕</button>
+      </div>
+      <p class="modal-subtitle"></p>
+      <div id="reflectionPanel">
+        <label for="giftLetter">harapan ke depan (opsional):</label>
+        <textarea id="giftLetter" rows="6" maxlength="2000" placeholder=" selamat menjadi 19"></textarea>
+        <p class="privacy-notice"></p>
+        <button id="saveGift">Kirim</button>
+      </div>
+      <div class="button-row">
+        <button id="openGift">play song</button>
+        <button id="skipReflection" class="ghost-btn">Lewati Pesan</button>
+      </div>
+      <p id="giftStatus" class="gift-status" role="status" aria-live="polite"></p>
+      <div id="giftInner" class="hidden">
+        <div class="song-card">
+          <p class="song-caption"> song <strong>“Sparks” — Coldplay</strong></p>
+          <iframe id="sparksPlayer" class="music-player" title="Sparks by Coldplay on Apple Music" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" loading="lazy"></iframe>
+          <a class="song-link" href="https://music.apple.com/us/album/sparks/1122782080?i=1122782281" target="_blank" rel="noopener noreferrer">Buka lagu di Apple Music</a>
+        </div>
+        <div id="letter"> Happy Birthday MY IDOLAAAAA :)</div> yang terbaik untukmu apapun itu, selalu... 
+      <a class="owner-inbox-link" href="/inbox.html">pemilik game (bragi)</a>
+      <button id="restartGame" class="restart-btn">Play Again</button>
+    </div>  <p style="font-size: 12px;">pembuatan game ini dimulai sejak 30 Juli 2026 @bragi
+  </div>
+</body>
+</html>

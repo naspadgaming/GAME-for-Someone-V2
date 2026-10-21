@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polished Sunflower Game</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js",
+      "three/": "https://cdn.jsdelivr.net/npm/three@0.154.0/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="hud">
+    <div id="info">Polished prototype — click flowers to collect</div>
+    <div id="basket">Basket: 0</div>
+    <div id="placed">Placed: 0 / 5</div>
+  </div>
+
+  <div id="giftModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Gift</h2>
+      <p id="giftText">Open the gift to reveal the surprise.</p>
+      <button id="closeGift">Close</button>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
