@@ -682,6 +682,12 @@ import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/
   // gift open button
   // gift save/open handling
   let giftLetterText = document.getElementById('giftLetter') ? document.getElementById('giftLetter').value : 'Surprise! Happy Birthday :)';
+  const sparksPlayer = document.getElementById('sparksPlayer');
+  if(sparksPlayer){
+    sparksPlayer.addEventListener('error', ()=>{
+      document.getElementById('musicFallback')?.classList.remove('hidden');
+    });
+  }
 
   const saveGiftBtn = document.getElementById('saveGift');
   if(saveGiftBtn){
@@ -742,7 +748,12 @@ import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/
     inner.classList.remove('hidden');
     const musicPlayer = document.getElementById('sparksPlayer');
     if(musicPlayer){
-      musicPlayer.src = 'https://embed.music.apple.com/us/album/sparks/1122782080?i=1122782281';
+      musicPlayer.currentTime = 0;
+      if(musicPlayer.error){
+        document.getElementById('musicFallback')?.classList.remove('hidden');
+      }else{
+        musicPlayer.play().catch(()=>{});
+      }
     }
     const letter = document.getElementById('letter');
     letter.innerText = giftLetterText || letter.innerText;
@@ -778,7 +789,7 @@ import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/
     const inner = document.getElementById('giftInner');
     if(inner) inner.classList.add('hidden');
     const musicPlayer = document.getElementById('sparksPlayer');
-    if(musicPlayer) musicPlayer.src = 'about:blank';
+    if(musicPlayer){ musicPlayer.pause(); musicPlayer.currentTime = 0; }
     updateHUD();
   }
   if(restartBtn){

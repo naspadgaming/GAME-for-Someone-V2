@@ -38,6 +38,7 @@ button:hover{transform:translateY(-1px)}
 .button-row button:disabled{opacity:.65;cursor:wait;transform:none}
 .song-card{margin-top:12px;padding:12px;background:#fff9fc;border:1px solid #f1cbd9;border-radius:14px}
 .song-caption{margin:0 0 8px;color:#6d3650;line-height:1.45}
-.music-player{display:block;width:100%;height:175px;margin-top:8px;border:0;border-radius:12px}
+.music-player{display:block;width:100%;margin-top:8px;border-radius:12px}
 .song-link{display:inline-block;margin-top:8px;color:#8a2d58;font-size:.9rem}
+.music-fallback{margin:8px 0 0;color:#6d3650;font-size:.9rem;line-height:1.5}
 canvas{display:block}

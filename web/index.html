@@ -54,8 +54,11 @@
       <div id="giftInner" class="hidden">
         <div class="song-card">
           <p class="song-caption"> song <strong>“Sparks” — Coldplay</strong></p>
-          <iframe id="sparksPlayer" class="music-player" title="Sparks by Coldplay on Apple Music" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" loading="lazy"></iframe>
-          <a class="song-link" href="https://music.apple.com/us/album/sparks/1122782080?i=1122782281" target="_blank" rel="noopener noreferrer">Buka lagu di Apple Music</a>
+          <audio id="sparksPlayer" class="music-player" controls preload="metadata">
+            <source src="assets/sparks.mp3" type="audio/mpeg">
+            Browser kamu tidak mendukung pemutar audio.
+          </audio>
+          <p id="musicFallback" class="music-fallback hidden">File MP3 belum tersedia di versi online. <a class="song-link" href="https://music.apple.com/us/album/sparks/1122782080?i=1122782281" target="_blank" rel="noopener noreferrer">Buka “Sparks” di Apple Music</a></p>
         </div>
         <div id="letter"> Happy Birthday MY IDOLAAAAA :)</div> yang terbaik untukmu apapun itu, selalu... 
       <a class="owner-inbox-link" href="/inbox.html">pemilik game (bragi)</a>
